@@ -20,7 +20,7 @@ class CustomerController extends Controller
 
         return response()->json([
             'status' => true,
-            'post' => $customer
+            'customer' => $customer
         ]);
     }
 
