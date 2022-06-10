@@ -18,14 +18,14 @@ class LoginController extends BaseController
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'email' => 'required|email',
+            'user_name' => 'required',
             'password' => 'required',
         ]);
 
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         } 
-        else if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        else if(Auth::attempt(['user_name' => $request->user_name, 'password' => $request->password])){
             $admin = Auth::user();
             $success['user_name'] =  $admin->user_name;
             // $token = Auth::attempt($admin);
