@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Vehicle extends Model
 {
     use HasFactory;
+    protected $table='vehicles';
     protected $fillable = [
         'brand', 
         'model', 
@@ -23,5 +24,7 @@ class Vehicle extends Model
         'cost', 
         'unit_price', 
         'margin', 
-        'trans_no'];
+        'trans_no',
+        'v_image'
+    ];
 }

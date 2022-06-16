@@ -30,6 +30,7 @@ return new class extends Migration
             $table->decimal('unit_price', 16,2);
             $table->decimal('margin');
             $table->integer('trans_no');
+            $table->string('v_image');
             $table->timestamps();
         });
     }

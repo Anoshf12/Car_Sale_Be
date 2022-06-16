@@ -36,18 +36,18 @@ class RegisterController extends BaseController
             'user_name' => $request->user_name,
             'password' => bcrypt($request->password)
         ]);
-        $token = Auth::login($admin);
-        return response()->json([
-            'status' => 'success',
-            'message' => 'User created successfully',
-            'user' => $admin,
-            'authorisation' => [
-                'token' => $token,
-                'type' => 'bearer',
-            ]
-        ]);
         $success['user_name'] = $admin->user_name;
         return $this->sendResponse($success, 'Admin register Successfull.');
+        // $token = Auth::login($admin);
+        // return response()->json([
+        //     'status' => 'success',
+        //     'message' => 'User created successfully',
+        //     'user' => $admin,
+        //     'authorisation' => [
+        //         'token' => $token,
+        //         'type' => 'bearer',
+        //     ]
+        // ]);
         // $input['password'] = bcrypt($input['password']);
         // $admin = Admin::create($input);
         // // $success['token'] =  $admin->createToken('MyApp')->accessToken;
