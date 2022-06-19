@@ -28,14 +28,14 @@ class StoreStaffRequest extends FormRequest
             "last_name"=>"required",
             "ph_no"=>"required|max:10|min:10",
             "address"=>"required",
-            "nic"=>"required|max:12|min:9",
-            "email"=>"required",
+            "nic"=>"required|unique:staff,nic|max:12|min:9",
+            "email"=>"required|unique:staff,email",
             "gender"=>"required",
             "d_o_b"=>"required",
             "position"=>"required",
             "shift"=>"required",
             "salary"=>"required",
-            "image"=>"required|max:2048"
+            "image"=>"max:2048"
         ];
     }
 }
