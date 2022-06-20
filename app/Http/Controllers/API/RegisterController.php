@@ -38,41 +38,5 @@ class RegisterController extends BaseController
         ]);
         $success['user_name'] = $admin->user_name;
         return $this->sendResponse($success, 'Admin register Successfull.');
-        // $token = Auth::login($admin);
-        // return response()->json([
-        //     'status' => 'success',
-        //     'message' => 'User created successfully',
-        //     'user' => $admin,
-        //     'authorisation' => [
-        //         'token' => $token,
-        //         'type' => 'bearer',
-        //     ]
-        // ]);
-        // $input['password'] = bcrypt($input['password']);
-        // $admin = Admin::create($input);
-        // // $success['token'] =  $admin->createToken('MyApp')->accessToken;
-        // // $success['name'] =  $admin->name;
-
-        // return $this->sendResponse($success, 'User register successfully.');
     }
-
-    
-    /**
-    * Login api
-    *
-    * @return \Illuminate\Http\Response
-    */
-    // public function index(Request $request)
-    // {
-    //     if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){ 
-    //         $user = Auth::user(); 
-    //         $success['token'] =  $user->createToken('MyApp')->accessToken; 
-    //         $success['name'] =  $user->name;
-
-    //         return $this->sendResponse($success, 'User login successfully.');
-    //     } 
-    //     else{ 
-    //         return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
-    //     } 
-    // }
 }
