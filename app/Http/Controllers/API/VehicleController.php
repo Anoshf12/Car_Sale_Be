@@ -56,6 +56,7 @@ class VehicleController extends Controller
         $v_image->cost=$request->cost;
         $v_image->unit_price=$request->unit_price;
         $v_image->margin=$request->margin;
+        $v_image->availability=$request->availability;
         $v_image->trans_no=$request->trans_no;
 
         $filename = Null;

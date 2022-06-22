@@ -39,6 +39,7 @@ class StoreVehicleRequest extends FormRequest
             "unit_price" => "required",
             "margin" => "required",
             "trans_no" => "required",
+            "availability"=>"required",
             'v_image' => "max:2048"
         ];
     }
