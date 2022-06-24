@@ -9,6 +9,7 @@ use App\Http\Controllers\API\LendedController;
 use App\Http\Controllers\API\TransactionController;
 use App\Http\Controllers\API\VehicleController;
 use App\Http\Controllers\API\StaffController;
+use App\Http\Controllers\API\VehicleinquiryController;
 
 /* Used for the Login and Registration of the Admin*/
 Route::apiResource('register', RegisterController::class);
@@ -21,3 +22,4 @@ Route::apiResource('transactions', TransactionController::class);
 Route::apiResource('customers', CustomerController::class);
 Route::apiResource('vehicles', VehicleController::class);
 Route::apiResource('staff', StaffController::class);
+Route::apiResource('vehicle_inquiry', VehicleinquiryController::class);
