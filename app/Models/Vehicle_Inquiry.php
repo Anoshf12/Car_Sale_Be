@@ -14,6 +14,7 @@ class Vehicle_Inquiry extends Model
         'email',
         'profession',
         'address',
+        'cus_req',
         'make',
         'brand',
         'model',

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('profession');
             $table->string('address');
+            $table->DATETIME('cus_req');
             $table->string('make');
             $table->string('brand');
             $table->string('model');
