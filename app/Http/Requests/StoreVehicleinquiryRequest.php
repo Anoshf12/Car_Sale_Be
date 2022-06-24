@@ -25,10 +25,11 @@ class StoreVehicleinquiryRequest extends FormRequest
     {
         return [
             "name" => "required",
-            "contact" => "required",
+            "contact" => "required|max:10|min:10",
             "email" => "required",
             "profession" => "required",
             "address" => "required",
+            "cus_req"=>"required",
             "make" => "required",
             "brand" => "required",
             "model" => "required",
