@@ -25,6 +25,7 @@ class Vehicle extends Model
         'unit_price', 
         'margin', 
         'trans_no',
+        'availability',
         'v_image'
     ];
 }

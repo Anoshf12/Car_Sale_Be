@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('unit_price');
             $table->string('margin');
             $table->string('trans_no');
+            $table->string('availability');
             $table->string('v_image');
             $table->timestamps();
         });
