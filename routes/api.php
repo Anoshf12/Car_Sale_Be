@@ -7,6 +7,7 @@ use App\Http\Controllers\API\CustomerController;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LendedController;
 use App\Http\Controllers\API\TransactionController;
+use App\Http\Controllers\API\MessageController;
 
 /* Used for the Login and Registration of the Admin*/
 Route::apiResource('register', RegisterController::class);
@@ -17,6 +18,7 @@ Route::apiResource('login', LoginController::class);
 Route::apiResource('lendeds', LendedController::class);
 Route::apiResource('transactions', TransactionController::class);
 Route::apiResource('customers', CustomerController::class);
+Route::apiResource('messages', MessageController::class);
 // Route::controller(LoginController::class)->group(function () {
 //     Route::post('login', 'login');
 //     Route::post('register', 'register');
