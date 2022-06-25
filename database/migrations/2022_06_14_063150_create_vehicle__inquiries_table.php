@@ -13,11 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('messages', function (Blueprint $table) {
+        Schema::create('vehicle__inquiries', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->integer('contact');
             $table->string('email');
-            $table->longText('message');
+            $table->string('profession');
+            $table->string('address');
+            $table->DATETIME('cus_req');
+            $table->string('make');
+            $table->string('brand');
+            $table->string('model');
+            $table->string('payment');
+            $table->string('insurance');
+            $table->string('remarks');
             $table->timestamps();
         });
     }
@@ -29,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('vehicle__inquiries');
     }
 };

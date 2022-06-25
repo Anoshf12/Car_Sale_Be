@@ -8,6 +8,9 @@ use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\LendedController;
 use App\Http\Controllers\API\TransactionController;
 use App\Http\Controllers\API\MessageController;
+use App\Http\Controllers\API\VehicleController;
+use App\Http\Controllers\API\StaffController;
+use App\Http\Controllers\API\VehicleinquiryController;
 
 /* Used for the Login and Registration of the Admin*/
 Route::apiResource('register', RegisterController::class);
@@ -18,21 +21,7 @@ Route::apiResource('login', LoginController::class);
 Route::apiResource('lendeds', LendedController::class);
 Route::apiResource('transactions', TransactionController::class);
 Route::apiResource('customers', CustomerController::class);
+Route::apiResource('vehicles', VehicleController::class);
+Route::apiResource('staff', StaffController::class);
+Route::apiResource('vehicle_inquiry', VehicleinquiryController::class);
 Route::apiResource('messages', MessageController::class);
-// Route::controller(LoginController::class)->group(function () {
-//     Route::post('login', 'login');
-//     Route::post('register', 'register');
-//     Route::post('logout', 'logout');
-//     Route::post('refresh', 'refresh');
-//     Route::get('me', 'me');
-// });
-// Route::controller(RegisterController::class)->group(function () {
-//     Route::post('login', 'login');
-//     Route::post('register', 'register');
-//     Route::post('logout', 'logout');
-//     Route::post('refresh', 'refresh');
-//     Route::get('me', 'me');
-// });
-// Route::middleware('auth:api')->group( function () {
-//     Route::resource('products', 'API\ProductController');
-// });
