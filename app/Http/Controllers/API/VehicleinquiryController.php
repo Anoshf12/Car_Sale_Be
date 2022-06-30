@@ -78,13 +78,13 @@ class VehicleinquiryController extends Controller
      * @param  \App\Models\Vehicle_Inquiry  $vehicle_Inquiry
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreVehicleinquiryRequest $request, Vehicle_Inquiry $vehicle_Inquiry)
+    public function update(StoreVehicleinquiryRequest $request, Vehicle_Inquiry $vehicle_inquiry)
     {
-        $vehicle_Inquiry->update($request->all());
+        $vehicle_inquiry->update($request->all());
         return response()->json([
             'status' => true,
             'message' => "Inquiry details updated Successfully!",
-            'post' => $vehicle_Inquiry
+            'post' => $vehicle_inquiry
         ], 200);
     }
 
@@ -94,9 +94,9 @@ class VehicleinquiryController extends Controller
      * @param  \App\Models\Vehicle_Inquiry  $vehicle_Inquiry
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vehicle_Inquiry $vehicle_Inquiry)
+    public function destroy(Vehicle_Inquiry $vehicle_inquiry)
     {
-        $vehicle_Inquiry->delete();
+        $vehicle_inquiry->delete();
         return response()->json([
             'status' => true,
             'message' => "Inquiry Deleted!"
