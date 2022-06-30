@@ -55,9 +55,9 @@ class SwapvehicleController extends Controller
      * @param  \App\Models\Swapvehicle  $swapvehicle
      * @return \Illuminate\Http\Response
      */
-    public function show(Swapvehicle $swapvehicle)
+    public function show($id)
     {
-        //
+        return Swapvehicle::find($id);
     }
 
     /**
