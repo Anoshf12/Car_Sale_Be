@@ -55,9 +55,9 @@ class VehicleinquiryController extends Controller
      * @param  \App\Models\Vehicle_Inquiry  $vehicle_Inquiry
      * @return \Illuminate\Http\Response
      */
-    public function show(Vehicle_Inquiry $vehicle_Inquiry)
+    public function show($id)
     {
-        //
+        return Vehicle_Inquiry::find($id);
     }
 
     /**
