@@ -55,9 +55,9 @@ class TestdriveController extends Controller
      * @param  \App\Models\Testdrive  $testdrive
      * @return \Illuminate\Http\Response
      */
-    public function show(Testdrive $testdrive)
+    public function show($id)
     {
-        //
+        return Testdrive::find($id);
     }
 
     /**
