@@ -13,6 +13,7 @@ use App\Http\Controllers\API\StaffController;
 use App\Http\Controllers\API\VehicleinquiryController;
 use App\Http\Controllers\Api\TestdriveController;
 use App\Http\Controllers\API\SwapvehicleController;
+use App\Http\Controllers\API\CurrentvisitController;
 
 /* Used for the Login and Registration of the Admin*/
 Route::apiResource('register', RegisterController::class);
@@ -29,3 +30,4 @@ Route::apiResource('vehicle_inquiry', VehicleinquiryController::class);
 Route::apiResource('testdrive', TestdriveController::class);
 Route::apiResource('swapvehicle', SwapvehicleController::class);
 Route::apiResource('messages', MessageController::class);
+Route::apiResource('currentvisits',CurrentvisitController::class);
