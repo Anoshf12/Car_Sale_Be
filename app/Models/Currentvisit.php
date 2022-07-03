@@ -9,5 +9,5 @@ class Currentvisit extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['current_visits'];
+    protected $fillable = ['current_visits','month'];
 }

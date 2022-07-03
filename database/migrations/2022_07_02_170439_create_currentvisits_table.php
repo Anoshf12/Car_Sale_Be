@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('currentvisits', function (Blueprint $table) {
             $table->id();
             $table->integer('current_visits');
+            $table->integer('month');
             $table->timestamps();
         });
     }
