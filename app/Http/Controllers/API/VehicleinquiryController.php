@@ -4,8 +4,10 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreVehicleinquiryRequest;
+use App\Mail\TestMail;
 use App\Models\Vehicle_Inquiry;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class VehicleinquiryController extends Controller
 {
@@ -42,6 +44,16 @@ class VehicleinquiryController extends Controller
     public function store(StoreVehicleinquiryRequest $request)
     {
         $vehicle_Inquiry = Vehicle_Inquiry::create($request->all());
+        $data=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'cus_req'=>$request->cus_req,
+            'brand'=>$request->brand,
+            'model'=>$request->model,
+            'subject' => "Vehicle Inquiry Session Logged",
+            'mail' => 'emails.Vehicleinquiry',
+        ];
+        Mail::to('receiver@gmail.com')->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Inquiry Logged",

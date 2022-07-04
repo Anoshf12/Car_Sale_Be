@@ -5,7 +5,9 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreMessageRequest;
 use App\Models\Message;
+use App\Mail\TestMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class MessageController extends Controller
 {
@@ -43,7 +45,13 @@ class MessageController extends Controller
     public function store(StoreMessageRequest $request)
     {
         $message = Message::create($request->all());
-
+        $data=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'subject' => "Site Review",
+            'mail' => 'emails.Cusreview',
+        ];
+        Mail::to('receiver@gmail.com')->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Message Created Successfully!",
@@ -80,15 +88,9 @@ class MessageController extends Controller
      * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreMessageRequest $request, Message $message)
+    public function update(Message $message)
     {
-        $meassage->update($request->all());
-
-        return response()->json([
-            'status' => true,
-            'message' => "Message Updated Successfully!",
-            'message' => $message
-        ], 200);
+        //
     }
 
     /**
@@ -99,11 +101,6 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        $message->delete();
-
-        return response()->json([
-            'status' => true,
-            'message' => "Message Deleted Successfully!",
-        ], 200);
+        //
     }
 }

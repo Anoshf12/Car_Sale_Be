@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Swapvehicle;
 use App\Http\Requests\StoreSwapvehicleRequest;
 use Illuminate\Http\Request;
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
 
 class SwapvehicleController extends Controller
 {
@@ -81,6 +83,18 @@ class SwapvehicleController extends Controller
     public function update(StoreSwapvehicleRequest $request, Swapvehicle $swapvehicle)
     {
         $swapvehicle->update($request->all());
+        $data=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'cus_brand'=>$request->cus_brand,
+            'cus_model'=>$request->cus_model,
+            'cus_year_manufacture'=>$request->cus_year_manufacture,
+            'brand'=>$request->brand,
+            'model'=>$request->model,
+            'subject'=> "Swap Vehicle Deal Accepted",
+            'mail'=> "emails.Swapvehicleaccept"
+        ];
+        Mail::to('receiver@gmail.com')->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Swap details updated Successfully!",
@@ -94,9 +108,21 @@ class SwapvehicleController extends Controller
      * @param  \App\Models\Swapvehicle  $swapvehicle
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Swapvehicle $swapvehicle)
+    public function destroy(Swapvehicle $swapvehicle, Request $request)
     {
         $swapvehicle->delete();
+        $data=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'cus_brand'=>$request->cus_brand,
+            'cus_model'=>$request->cus_model,
+            'cus_year_manufacture'=>$request->cus_year_manufacture,
+            'brand'=>$request->brand,
+            'model'=>$request->model,
+            'subject'=> "Swap Vehicle Deal Rejected",
+            'mail'=> "emails.Swapvehicledecline",
+        ];
+        Mail::to('receiver@gmail.com')->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Swap Details Removed!"

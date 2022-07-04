@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Testdrive;
+use App\Mail\TestMail;
 use App\Http\Requests\StoreTestdriveRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class TestdriveController extends Controller
 {
@@ -42,6 +44,17 @@ class TestdriveController extends Controller
     public function store(StoreTestdriveRequest $request)
     {
         $testdrive = Testdrive::create($request->all());
+        $data=[
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'cus_req'=>$request->cus_req,
+            'brand'=>$request->brand,
+            'model'=>$request->model,
+            'year_manufacture'=>$request->year_manufacture,
+            'subject' => "Vehicle Test Drive Session Logged",
+            'mail' => 'emails.Testdrive',
+        ];
+        Mail::to('receiver@gmail.com')->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Test Session Logged",
