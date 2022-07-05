@@ -27,7 +27,9 @@ class LoginController extends BaseController
         } 
         else if(Auth::attempt(['user_name' => $request->user_name, 'password' => $request->password])){
             $admin = Auth::user();
-            $success['user_name'] =  $admin->user_name;
+            $success['first_name'] =  $admin->first_name;
+            $success['last_name'] =  $admin->last_name;
+            $success['email'] =  $admin->email;
             // $token = Auth::attempt($admin);
             // if (!$token) {
             //     return response()->json([
