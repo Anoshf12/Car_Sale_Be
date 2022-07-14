@@ -26,6 +26,7 @@ class Vehicle extends Model
         'margin', 
         'trans_no',
         'availability',
-        'v_image'
+        'v_image',
+        'maintenance_id'
     ];
 }
