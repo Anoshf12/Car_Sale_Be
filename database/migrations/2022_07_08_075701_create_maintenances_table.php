@@ -17,8 +17,7 @@ return new class extends Migration
             $table->increments('maintenance_id');
             $table->string('cost');
             $table->string('comment');
-            $table->integer('vehicleid');
-            $table->foreign('vehicleid')->references('id')->on('vehicles');
+            $table->foreignId('vehicleid')->references('id')->on('vehicles');
             $table->timestamps();
         });
     }
