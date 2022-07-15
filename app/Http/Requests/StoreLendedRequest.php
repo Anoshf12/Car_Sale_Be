@@ -24,9 +24,13 @@ class StoreLendedRequest extends FormRequest
     public function rules()
     {
         return [
-            "customer_id" => "required|max:3",
-            "car_id" => "required|max:3",
-            "trans_no" => "required|max:3"
+            "lendeds_name" => "required",
+            "lendeds_contact" => "required",
+            "lendeds_address" => "required",
+            "lendeds_nic" => "required",
+            "lendeds_email" => "required",
+            "chassis_no" => "required",
+            "reg_no" => "required"
         ];
     }
 }

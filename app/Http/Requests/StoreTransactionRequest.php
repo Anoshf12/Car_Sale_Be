@@ -24,9 +24,13 @@ class StoreTransactionRequest extends FormRequest
     public function rules()
     {
         return [
-            "form" => "required|max:30",
-            "query" => "required|max:30",
-            "user_id" => "required|max:3"
+            "brand" => "required",
+            "model" => "required",
+            "make" => "required",
+            "year_manufacture" => "required",
+            "year_registration" => "required",
+            "chassis_no" => "required",
+            "unit_price" => "required",
         ];
     }
 }

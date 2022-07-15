@@ -8,5 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Transaction extends Model
 {
     use HasFactory;
-    protected $fillable = ['form', 'query', 'user_id'];
+    protected $fillable = [
+        'trans_id',
+        'brand', 
+        'model', 
+        'make',
+        'year_manufacture',
+        'year_registration',
+        'chassis_no',
+        'unit_price'
+    ];
 }

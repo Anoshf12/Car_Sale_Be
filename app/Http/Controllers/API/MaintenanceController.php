@@ -56,9 +56,9 @@ class MaintenanceController extends Controller
      * @param  \App\Models\Maintenance  $maintenance
      * @return \Illuminate\Http\Response
      */
-    public function show(Maintenance $maintenance)
+    public function show(Maintenance $maintenance, $id)
     {
-        //
+        return Maintenance::find($id);
     }
 
     /**

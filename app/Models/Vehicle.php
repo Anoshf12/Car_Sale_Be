@@ -23,10 +23,8 @@ class Vehicle extends Model
         'remarks', 
         'cost', 
         'unit_price', 
-        'margin', 
-        'trans_no',
+        'margin',
         'availability',
-        'v_image',
-        'maintenance_id'
+        'v_image'
     ];
 }

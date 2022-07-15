@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('form');
-            $table->string('query');
-            $table->integer('user_id');
+            $table->string('brand');
+            $table->string('model');
+            $table->string('make');
+            $table->string('year_manufacture');
+            $table->string('year_registration');
+            $table->string('chassis_no');
+            $table->string('unit_price');
             $table->timestamps();
         });
     }

@@ -55,9 +55,9 @@ class LendedController extends Controller
      * @param  \App\Models\Lended  $lended
      * @return \Illuminate\Http\Response
      */
-    public function show(Lended $lended)
+    public function show(Lended $lended, $id)
     {
-        //
+        return Lended::find($id);
     }
 
     /**

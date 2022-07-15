@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Maintenance extends Model
 {
     use HasFactory;
-    protected $fillable = ['maintenance_id', 'cost', 'comment', 'vehicleid'];
+    protected $fillable = [
+        'maintenance_id', 
+        'cost', 
+        'comment', 
+        'vehicleid'
+    ];
 }

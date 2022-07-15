@@ -14,10 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('lendeds', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('customer_id');
-            $table->integer('car_id');
-            $table->integer('trans_no');
+            $table->increments('lendeds_id');
+            $table->string('lendeds_name');
+            $table->string('lendeds_contact');
+            $table->string('lendeds_address');
+            $table->string('lendeds_nic');
+            $table->string('lendeds_email');
+            $table->string('reg_no');
+            $table->string('chassis_no');
             $table->timestamps();
         });
     }
