@@ -16,6 +16,6 @@ class Lended extends Model
         'lendeds_nic', 
         'lendeds_email', 
         'chassis_no', 
-        'reg_no'
+        'model'
     ];
 }

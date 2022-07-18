@@ -30,7 +30,7 @@ class StoreLendedRequest extends FormRequest
             "lendeds_nic" => "required",
             "lendeds_email" => "required",
             "chassis_no" => "required",
-            "reg_no" => "required"
+            "model" => "required"
         ];
     }
 }

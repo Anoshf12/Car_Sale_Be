@@ -19,7 +19,7 @@ class LendedController extends Controller
         $lended = Lended::all();
         return response()->json([
             'status' => true,
-            'posts' => $lended
+            'data' => $lended
         ]);
     }
 
@@ -45,7 +45,7 @@ class LendedController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Lending was Successfully",
-            'post' => $lended
+            'data' => $lended
         ], 200);
     }
 
@@ -84,7 +84,7 @@ class LendedController extends Controller
         return response()->json([
             'status' => true,
             'message' => "lending details updated Successfully!",
-            'post' => $lended
+            'data' => $lended
         ], 200);
     }
 

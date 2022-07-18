@@ -26,7 +26,9 @@ class StoreMaintenanceRequest extends FormRequest
         return [
             "cost" => "required",
             "comment" => "required",
-            "vehicleid" => "required"
+            "vehicleid" => "required",
+            "brand" => "required",
+            "chassis_no" => "required"
         ];
     }
 }

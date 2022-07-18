@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lendeds_address');
             $table->string('lendeds_nic');
             $table->string('lendeds_email');
-            $table->string('reg_no');
+            $table->string('model');
             $table->string('chassis_no');
             $table->timestamps();
         });

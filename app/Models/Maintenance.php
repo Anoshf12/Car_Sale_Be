@@ -12,6 +12,8 @@ class Maintenance extends Model
         'maintenance_id', 
         'cost', 
         'comment', 
-        'vehicleid'
+        'vehicleid',
+        'brand',
+        'chassis_no'
     ];
 }
