@@ -14,6 +14,7 @@ class Maintenance extends Model
         'comment', 
         'vehicleid',
         'brand',
+        'model',
         'chassis_no'
     ];
 }

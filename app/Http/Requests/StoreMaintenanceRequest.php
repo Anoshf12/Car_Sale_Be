@@ -28,6 +28,7 @@ class StoreMaintenanceRequest extends FormRequest
             "comment" => "required",
             "vehicleid" => "required",
             "brand" => "required",
+            "model" => "required",
             "chassis_no" => "required"
         ];
     }
