@@ -21,7 +21,7 @@ class SwapvehicleController extends Controller
         $swapvehicle = Swapvehicle::all();
         return response()->json([
             'status' => true,
-            'data' => $swapvehicle
+            'posts' => $swapvehicle
         ]);
     }
 
@@ -47,7 +47,7 @@ class SwapvehicleController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Swap Details Recorded Successfully!",
-            'data' => $swapvehicle
+            'post' => $swapvehicle
         ], 200);
     }
 
@@ -98,7 +98,7 @@ class SwapvehicleController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Swap details updated Successfully!",
-            'data' => $swapvehicle
+            'post' => $swapvehicle
         ], 200);
     }
 

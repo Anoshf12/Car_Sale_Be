@@ -21,7 +21,7 @@ class VehicleinquiryController extends Controller
         $vehicle_Inquiry = Vehicle_Inquiry::all();
         return response()->json([
             'status' => true,
-            'data' => $vehicle_Inquiry
+            'posts' => $vehicle_Inquiry
         ]);
     }
 
@@ -57,7 +57,7 @@ class VehicleinquiryController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Inquiry Logged",
-            'data' => $vehicle_Inquiry
+            'post' => $vehicle_Inquiry
         ], 200);
     }
 
@@ -96,7 +96,7 @@ class VehicleinquiryController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Inquiry details updated Successfully!",
-            'data' => $vehicle_inquiry
+            'post' => $vehicle_inquiry
         ], 200);
     }
 

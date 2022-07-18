@@ -21,7 +21,7 @@ class TestdriveController extends Controller
         $testdrive = Testdrive::all();
         return response()->json([
             'status' => true,
-            'data' => $testdrive
+            'posts' => $testdrive
         ]);
     }
 
@@ -58,7 +58,7 @@ class TestdriveController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Test Session Logged",
-            'data' => $testdrive
+            'post' => $testdrive
         ], 200);
     }
 
@@ -97,7 +97,7 @@ class TestdriveController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Test Session details updated Successfully!",
-            'data' => $testdrive
+            'post' => $testdrive
         ], 200);
     }
 

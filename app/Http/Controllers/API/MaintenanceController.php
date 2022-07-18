@@ -19,7 +19,7 @@ class MaintenanceController extends Controller
         $maintenance = Maintenance::all();
         return response()->json([
             'status' => true,
-            'data' => $maintenance
+            'posts' => $maintenance
         ]);
 
     }
@@ -46,7 +46,7 @@ class MaintenanceController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Maintenance Details Added Successfully",
-            'data' => $maintenance
+            'post' => $maintenance
         ], 200);
     }
 
@@ -85,7 +85,7 @@ class MaintenanceController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Maintenance details updated Successfully!",
-            'data' => $maintenance
+            'post' => $maintenance
         ], 200);
     }
 

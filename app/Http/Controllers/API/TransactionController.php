@@ -19,7 +19,7 @@ class TransactionController extends Controller
         $transaction = Transaction::all();
         return response()->json([
             'status' => true,
-            'data' => $transaction
+            'posts' => $transaction
         ]);
     }
 
@@ -45,7 +45,7 @@ class TransactionController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Transaction was Successful",
-            'data' => $transaction
+            'post' => $transaction
         ], 200);
     }
 
@@ -84,7 +84,7 @@ class TransactionController extends Controller
         return response()->json([
             'status' => true,
             'message' => "transaction details updated Successfully!",
-            'data' => $transaction
+            'post' => $transaction
         ], 200);
     }
 

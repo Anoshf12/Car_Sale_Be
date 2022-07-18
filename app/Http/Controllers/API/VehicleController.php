@@ -108,7 +108,7 @@ class VehicleController extends Controller
         return response()->json([
             'status' => true,
             'message' => "Vehicle details updated Successfully!",
-            'data' => $vehicle
+            'post' => $vehicle
         ], 200);
     }
 
