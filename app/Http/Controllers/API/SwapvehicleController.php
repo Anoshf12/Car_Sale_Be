@@ -21,6 +21,7 @@ class SwapvehicleController extends Controller
         $swapvehicle = Swapvehicle::all();
         return response()->json([
             'status' => true,
+            'count' => count($swapvehicle),
             'posts' => $swapvehicle
         ]);
     }

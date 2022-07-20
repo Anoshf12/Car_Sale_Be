@@ -19,6 +19,7 @@ class VehicleController extends Controller
         $vehicle = Vehicle::all();
         return response()->json([
             'status' => true,
+            'count' => count($vehicle),
             'Vehicle' => $vehicle
         ]);
     }

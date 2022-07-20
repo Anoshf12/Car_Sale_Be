@@ -20,6 +20,7 @@ class StaffController extends Controller
 
         return response()->json([
             'status'=>true,
+            'count' => count($staff),
             'staff'=>$staff
         ]);
     }
