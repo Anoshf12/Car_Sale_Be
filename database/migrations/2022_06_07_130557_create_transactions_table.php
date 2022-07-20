@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('year_registration');
             $table->string('chassis_no');
             $table->string('unit_price');
+            $table->string('query');
             $table->timestamps();
         });
     }

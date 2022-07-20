@@ -31,6 +31,7 @@ class StoreTransactionRequest extends FormRequest
             "year_registration" => "required",
             "chassis_no" => "required",
             "unit_price" => "required",
+            "query" => "required"
         ];
     }
 }

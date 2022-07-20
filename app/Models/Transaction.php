@@ -16,6 +16,7 @@ class Transaction extends Model
         'year_manufacture',
         'year_registration',
         'chassis_no',
-        'unit_price'
+        'unit_price',
+        'query'
     ];
 }
