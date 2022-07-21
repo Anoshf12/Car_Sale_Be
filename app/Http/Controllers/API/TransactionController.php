@@ -55,7 +55,7 @@ class TransactionController extends Controller
      * @param  \App\Models\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
-    public function show(Transaction $transaction, $id)
+    public function show($id)
     {
         return Transaction::find($id);
     }
