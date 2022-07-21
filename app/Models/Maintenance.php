@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Maintenance extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'maintenance_id', 
+    protected $fillable = [ 
         'cost', 
         'comment', 
         'vehicleid',
