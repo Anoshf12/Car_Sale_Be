@@ -54,7 +54,7 @@ class TestdriveController extends Controller
             'subject' => "Vehicle Test Drive Session Logged",
             'mail' => 'emails.Testdrive',
         ];
-        Mail::to('receiver@gmail.com')->send(new TestMail($data));
+        Mail::to($data['email'])->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Test Session Logged",

@@ -51,7 +51,7 @@ class MessageController extends Controller
             'subject' => "Site Review",
             'mail' => 'emails.Cusreview',
         ];
-        Mail::to('receiver@gmail.com')->send(new TestMail($data));
+        Mail::to($data['email'])->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Message Created Successfully!",

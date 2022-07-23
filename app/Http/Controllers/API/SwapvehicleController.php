@@ -95,7 +95,7 @@ class SwapvehicleController extends Controller
             'subject'=> "Swap Vehicle Deal Accepted",
             'mail'=> "emails.Swapvehicleaccept"
         ];
-        Mail::to('receiver@gmail.com')->send(new TestMail($data));
+        Mail::to($data['email'])->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Swap details updated Successfully!",
@@ -123,7 +123,7 @@ class SwapvehicleController extends Controller
             'subject'=> "Swap Vehicle Deal Rejected",
             'mail'=> "emails.Swapvehicledecline",
         ];
-        Mail::to('receiver@gmail.com')->send(new TestMail($data));
+        Mail::to($data['email'])->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Swap Details Removed!"

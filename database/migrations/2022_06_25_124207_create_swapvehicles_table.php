@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('swapvehicles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('contact');
+            $table->string('contact');
             $table->string('email');
             $table->string('profession');
             $table->string('address');

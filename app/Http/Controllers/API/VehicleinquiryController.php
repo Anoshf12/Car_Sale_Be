@@ -53,7 +53,7 @@ class VehicleinquiryController extends Controller
             'subject' => "Vehicle Inquiry Session Logged",
             'mail' => 'emails.Vehicleinquiry',
         ];
-        Mail::to('receiver@gmail.com')->send(new TestMail($data));
+        Mail::to($data['email'])->send(new TestMail($data));
         return response()->json([
             'status' => true,
             'message' => "Inquiry Logged",
