@@ -18,7 +18,6 @@ class Testdrive extends Model
         'make',
         'brand',
         'model',
-        'year_manufacture',
-        'ownership'
+        'year_manufacture'
     ];
 }

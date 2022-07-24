@@ -33,8 +33,7 @@ class StoreTestdriveRequest extends FormRequest
             "make" => "required",
             "brand" => "required",
             "model" => "required",
-            "year_manufacture" => "required",
-            "ownership" => "required"
+            "year_manufacture" => "required"
         ];
     }
 }

@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('year_manufacture');
-            $table->string('ownership');
             $table->timestamps();
         });
     }
